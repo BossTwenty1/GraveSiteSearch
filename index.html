@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GraveSiteSearch - Login</title>
+    <link rel="stylesheet" href="shared/style.css">
+    <style>
+        body {
+            background-image: url('assets/login-bg.jpg'); /* Adjust path if needed */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.4); /* semi-transparent black */
+            z-index: 0;
+        }
+        .login-container {
+            position: relative;
+            z-index: 1;
+        }
+        .app-logo h1 {
+            color: #fff;           /* White for visibility */
+            text-shadow: 2px 2px 8px #000; /* Optional: adds contrast */
+        }
+        .app-logo p {
+            color: #ffe082;        /* Light yellow for contrast */
+            text-shadow: 1px 1px 6px #000; /* Optional: adds contrast */
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="app-logo">
+            <h1>GraveSiteSearch</h1>
+            <p>Honoring memories, connecting generations</p>
+        </div>
+        
+        <div class="login-form">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="userType">I am a:</label>
+                    <select id="userType" required>
+                        <option value="">Select user type</option>
+                        <option value="visitor">Visitor</option>
+                        <option value="staff">Cemetery Staff</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary">Login</button>
+            </form>
+            <div class="login-footer">
+                <p>Don't have an account? <a href="#">Register</a></p>
+                <p><a href="#">Forgot password?</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="shared/script.js"></script>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const userType = document.getElementById('userType').value;
+            if (userType === 'visitor') {
+                window.location.href = 'visitor/dashboard.html';
+            } else if (userType === 'staff') {
+                window.location.href = 'staff/dashboard.html';
+            }
+        });
+    </script>
+</body>
+</html>

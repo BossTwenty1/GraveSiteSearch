@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GraveSiteSearch - Maintenance</title>
+    <link rel="stylesheet" href="../shared/style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+    <header class="app-header">
+        <div class="header-left">
+            <h1>GraveSiteSearch</h1>
+            <p>Staff Portal</p>
+        </div>
+        <div class="header-right">
+            <button class="btn-icon" id="notificationsBtn">
+                <span class="notification-badge">5</span>
+                <i class="icon-bell"></i>
+            </button>
+            <div class="user-profile">
+                <img src="../assets/avatar.jpg" alt="User">
+                <span>Nash Mapula</span>
+            </div>
+        </div>
+    </header>
+
+    <nav class="sidebar">
+        <ul>
+            <li><a href="dashboard.html"><i class="icon-home"></i> Dashboard</a></li>
+            <li><a href="map.html"><i class="icon-map"></i> Cemetery Map</a></li>
+            <li class="active"><a href="schedule.html"><i class="icon-calendar"></i> Maintenance</a></li>
+            <li><a href="records.html"><i class="icon-records"></i> Records</a></li>
+            <li><a href="settings.html"><i class="icon-settings"></i> Settings</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <div class="maintenance-header">
+            <h2>Maintenance Management</h2>
+            <div class="maintenance-actions">
+                <button class="btn-primary" id="newMaintenanceBtn">
+                    <i class="icon-add"></i> New Maintenance Task
+                </button>
+                <div class="view-toggle">
+                    <button class="btn-toggle active">List View</button>
+                    <button class="btn-toggle">Calendar View</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="maintenance-filters">
+            <div class="filter-group">
+                <label for="statusFilter">Status:</label>
+                <select id="statusFilter">
+                    <option value="all">All Statuses</option>
+                    <option value="pending">Pending</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="completed">Completed</option>
+                    <option value="overdue">Overdue</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="dateFilter">Date Range:</label>
+                <input type="text" id="dateFilter" placeholder="Select date range">
+            </div>
+            <div class="filter-group">
+                <label for="priorityFilter">Priority:</label>
+                <select id="priorityFilter">
+                    <option value="all">All Priorities</option>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </div>
+            <button class="btn-secondary">Apply Filters</button>
+        </div>
+
+        <div class="maintenance-list">
+            <div class="list-header">
+                <div class="header-item">Task</div>
+                <div class="header-item">Plot</div>
+                <div class="header-item">Assigned To</div>
+                <div class="header-item">Due Date</div>
+                <div class="header-item">Status</div>
+                <div class="header-item">Actions</div>
+            </div>
+            
+            <div class="maintenance-item urgent">
+                <div class="item-column">
+                    <h4>Repair Headstone</h4>
+                    <p>Cracked on left side</p>
+                </div>
+                <div class="item-column">B-15</div>
+                <div class="item-column">
+                    <div class="assignee">
+                        <img src="../assets/bruno.jpg" alt="Bruno Mars">
+                        <span>Bruno Mars</span>
+                    </div>
+                </div>
+                <div class="item-column">
+                    <span class="due-date overdue">Today</span>
+                </div>
+                <div class="item-column">
+                    <span class="status-badge pending">Pending</span>
+                </div>
+                <div class="item-column actions">
+                    <button class="btn-icon" title="Edit"><i class="icon-edit"></i></button>
+                    <button class="btn-icon" title="Complete"><i class="icon-check"></i></button>
+                </div>
+            </div>
+            
+            <div class="maintenance-item">
+                <div class="item-column">
+                    <h4>Weekly Groundskeeping</h4>
+                    <p>Mow lawns, trim hedges</p>
+                </div>
+                <div class="item-column">All</div>
+                <div class="item-column">
+                    <div class="assignee">
+                        <img src="../assets/Justine.jpg" alt="Justine Bieber">
+                        <span>Justine Bieber</span>
+                    </div>
+                </div>
+                <div class="item-column">
+                    <span class="due-date">Fri, Jun 14</span>
+                </div>
+                <div class="item-column">
+                    <span class="status-badge pending">Pending</span>
+                </div>
+                <div class="item-column actions">
+                    <button class="btn-icon" title="Edit"><i class="icon-edit"></i></button>
+                    <button class="btn-icon" title="Complete"><i class="icon-check"></i></button>
+                </div>
+            </div>
+            
+            <div class="maintenance-item">
+                <div class="item-column">
+                    <h4>Prepare New Plot</h4>
+                    <p>For Johnson service</p>
+                </div>
+                <div class="item-column">D-42</div>
+                <div class="item-column">
+                    <div class="assignee">
+                        <img src="../assets/taylor.jpg" alt="Taylor Swift">
+                        <span>Taylor Swift</span>
+                    </div>
+                </div>
+                <div class="item-column">
+                    <span class="due-date">Mon, Jun 17</span>
+                </div>
+                <div class="item-column">
+                    <span class="status-badge in-progress">In Progress</span>
+                </div>
+                <div class="item-column actions">
+                    <button class="btn-icon" title="Edit"><i class="icon-edit"></i></button>
+                    <button class="btn-icon" title="Complete"><i class="icon-check"></i></button>
+                </div>
+            </div>
+            
+            <div class="maintenance-item completed">
+                <div class="item-column">
+                    <h4>Clean Memorial</h4>
+                    <p>Main fountain area</p>
+                </div>
+                <div class="item-column">F-1</div>
+                <div class="item-column">
+                    <div class="assignee">
+                        <img src="../assets/bron.jpg" alt="Lebron James">
+                        <span>Lebron James</span>
+                    </div>
+                </div>
+                <div class="item-column">
+                    <span class="due-date">Mon, Jun 10</span>
+                </div>
+                <div class="item-column">
+                    <span class="status-badge completed">Completed</span>
+                </div>
+                <div class="item-column actions">
+                    <button class="btn-icon" title="Edit"><i class="icon-edit"></i></button>
+                    <button class="btn-icon" title="View"><i class="icon-eye"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- New Maintenance Modal (hidden by default) -->
+        <div class="modal" id="newMaintenanceModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>New Maintenance Task</h3>
+                    <button class="close-modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form id="maintenanceForm">
+                        <div class="form-group">
+                            <label for="taskTitle">Task Title</label>
+                            <input type="text" id="taskTitle" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="taskPlot">Plot Location</label>
+                                <input type="text" id="taskPlot" placeholder="e.g., A-42">
+                            </div>
+                            <div class="form-group">
+                                <label for="taskPriority">Priority</label>
+                                <select id="taskPriority" required>
+                                    <option value="high">High</option>
+                                    <option value="medium" selected>Medium</option>
+                                    <option value="low">Low</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="taskDescription">Description</label>
+                            <textarea id="taskDescription" rows="3"></textarea>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="taskDueDate">Due Date</label>
+                                <input type="text" id="taskDueDate" class="datepicker">
+                            </div>
+                            <div class="form-group">
+                                <label for="taskAssignee">Assign To</label>
+                                <select id="taskAssignee">
+                                    <option value="sarah">Bruno Mars</option>
+                                    <option value="john">Justine Bieber</option>
+                                    <option value="mike">Taylor Swift</option>
+                                    <option value="lisa">Lebron James</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn-secondary close-modal">Cancel</button>
+                            <button type="submit" class="btn-primary">Create Task</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../shared/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        // Initialize date picker
+        flatpickr("#dateFilter", {
+            mode: "range",
+            dateFormat: "Y-m-d",
+        });
+
+        flatpickr("#taskDueDate", {
+            dateFormat: "Y-m-d",
+            minDate: "today"
+        });
+
+        // Modal functionality
+        const modal = document.getElementById('newMaintenanceModal');
+        const openBtn = document.getElementById('newMaintenanceBtn');
+        const closeBtns = document.querySelectorAll('.close-modal');
+
+        openBtn.addEventListener('click', function() {
+            modal.style.display = 'block';
+        });
+
+        closeBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                modal.style.display = 'none';
+            });
+        });
+
+        window.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GraveSiteSearch - Records</title>
+    <link rel="stylesheet" href="../shared/style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="app-header">
+        <div class="header-left">
+            <h1>GraveSiteSearch</h1>
+            <p>Staff Portal</p>
+        </div>
+        <div class="header-right">
+            <button class="btn-icon" id="notificationsBtn">
+                <span class="notification-badge">5</span>
+                <i class="icon-bell"></i>
+            </button>
+            <div class="user-profile">
+                <img src="../assets/avatar.jpg" alt="User">
+                <span>Nash Mapula</span>
+            </div>
+        </div>
+    </header>
+
+    <nav class="sidebar">
+        <ul>
+            <li><a href="dashboard.html"><i class="icon-home"></i> Dashboard</a></li>
+            <li><a href="map.html"><i class="icon-map"></i> Cemetery Map</a></li>
+            <li><a href="schedule.html"><i class="icon-calendar"></i> Maintenance</a></li>
+            <li class="active"><a href="records.html"><i class="icon-records"></i> Records</a></li>
+            <li><a href="settings.html"><i class="icon-settings"></i> Settings</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <div class="records-header">
+            <h2>Burial Records</h2>
+            <div class="records-actions">
+                <button class="btn-primary" id="newRecordBtn">
+                    <i class="icon-add"></i> New Record
+                </button>
+                <div class="search-box">
+                    <input type="text" placeholder="Search records...">
+                    <button class="btn-icon"><i class="icon-search"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="records-filters">
+            <div class="filter-group">
+                <label for="recordType">Record Type:</label>
+                <select id="recordType">
+                    <option value="all">All Records</option>
+                    <option value="burial">Burials</option>
+                    <option value="plot">Plot Sales</option>
+                    <option value="service">Services</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="recordYear">Year:</label>
+                <select id="recordYear">
+                    <option value="all">All Years</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="recordSection">Section:</label>
+                <select id="recordSection">
+                    <option value="all">All Sections</option>
+                    <option value="A">Section A</option>
+                    <option value="B">Section B</option>
+                    <option value="C">Section C</option>
+                    <option value="D">Section D</option>
+                </select>
+            </div>
+            <button class="btn-secondary">Apply Filters</button>
+            <button class="btn-secondary"><i class="icon-download"></i> Export</button>
+        </div>
+
+        <div class="records-table-container">
+            <table class="records-table">
+                <thead>
+                    <tr>
+                        <th>Record ID</th>
+                        <th>Deceased Name</th>
+                        <th>Plot Location</th>
+                        <th>Burial Date</th>
+                        <th>Contact Person</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>BR-2023-042</td>
+                        <td>Bruno Mars</td>
+                        <td>A-42</td>
+                        <td>Nov 25, 2019</td>
+                        <td>Lebron James (Son)</td>
+                        <td><span class="status-badge completed">Completed</span></td>
+                        <td>
+                            <button class="btn-icon" title="View"><i class="icon-eye"></i></button>
+                            <button class="btn-icon" title="Edit"><i class="icon-edit"></i></button>
+                            <button class="btn-icon" title="Print"><i class="icon-print"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>BR-2020-018</td>
+                        <td>Justine Bieber</td>
+                        <td>B-15</td>
+                        <td>May 20, 2020</td>
+                        <td>Stephen Curry (Son)</td>
+                        <td><span class="status-badge completed">Completed</span></td>
+                        <td>
+                            <button class="btn-icon" title="View"><i class="icon-eye"></i></button>
+                            <button class="btn-icon" title="Edit"><i class="icon-edit"></i></button>
+                            <button class="btn-icon" title="Print"><i class="icon-print"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>PS-2023-107</td>
+                        <td>-</td>
+                        <td>D-42</td>
+                        <td>-</td>
+                        <td>Michael Jordan</td>
+                        <td><span class="status-badge pending">Reserved</span></td>
+                        <td>
+                            <button class="btn-icon" title="View"><i class="icon-eye"></i></button>
+                            <button class="btn-icon" title="Edit"><i class="icon-edit"></i></button>
+                            <button class="btn-icon" title="Print"><i class="icon-print"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>SR-2023-056</td>
+                        <td>-</td>
+                        <td>Memorial Garden</td>
+                        <td>Jun 5, 2023</td>
+                        <td>Ariana Grande</td>
+                        <td><span class="status-badge completed">Completed</span></td>
+                        <td>
+                            <button class="btn-icon" title="View"><i class="icon-eye"></i></button>
+                            <button class="btn-icon" title="Edit"><i class="icon-edit"></i></button>
+                            <button class="btn-icon" title="Print"><i class="icon-print"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="pagination">
+            <button class="btn-secondary" disabled>Previous</button>
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <span class="page-ellipsis">...</span>
+            <button class="page-btn">8</button>
+            <button class="btn-secondary">Next</button>
+        </div>
+    </main>
+
+    <script src="../shared/script.js"></script>
+</body>
+</html>

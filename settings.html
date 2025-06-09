@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GraveSiteSearch - Settings</title>
+    <link rel="stylesheet" href="../shared/style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="app-header">
+        <div class="header-left">
+            <h1>GraveSiteSearch</h1>
+            <p>Staff Portal</p>
+        </div>
+        <div class="header-right">
+            <button class="btn-icon" id="notificationsBtn">
+                <span class="notification-badge">5</span>
+                <i class="icon-bell"></i>
+            </button>
+            <div class="user-profile">
+                <img src="../assets/avatar.jpg" alt="Nash Mapula">
+                <span>Nash Mapula</span>
+            </div>
+        </div>
+    </header>
+
+    <nav class="sidebar">
+        <ul>
+            <li><a href="dashboard.html"><i class="icon-home"></i> Dashboard</a></li>
+            <li><a href="map.html"><i class="icon-map"></i> Cemetery Map</a></li>
+            <li><a href="schedule.html"><i class="icon-calendar"></i> Maintenance</a></li>
+            <li><a href="records.html"><i class="icon-records"></i> Records</a></li>
+            <li class="active"><a href="settings.html"><i class="icon-settings"></i> Settings</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <div class="settings-header">
+            <h2>Settings</h2>
+            <p>Manage your account and application preferences</p>
+        </div>
+
+        <div class="settings-tabs">
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-tab="account">Account</button>
+                <button class="tab-btn" data-tab="notifications">Notifications</button>
+                <button class="tab-btn" data-tab="security">Security</button>
+                <button class="tab-btn" data-tab="cemetery">Cemetery Settings</button>
+            </div>
+            
+            <div class="tab-content active" id="account-tab">
+                <form class="settings-form">
+                    <div class="form-group">
+                        <label for="profilePhoto">Profile Photo</label>
+                        <div class="photo-upload">
+                            <img src="../assets/avatar.jpg" alt="Current Photo" id="currentPhoto">
+                            <div class="upload-controls">
+                                <button type="button" class="btn-secondary" id="uploadBtn">Upload New</button>
+                                <p>JPG, GIF or PNG. Max size 2MB</p>
+                                <input type="file" id="profilePhoto" accept="image/*" style="display: none;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" value="Nash">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" value="Mapula">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" value="nash.mapula@cemetery.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" value="09634449960">
+                    </div>
+                    <div class="form-group">
+                        <label for="position">Position</label>
+                        <input type="text" id="position" value="Cemetery Manager">
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary">Cancel</button>
+                        <button type="submit" class="btn-primary">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="tab-content" id="notifications-tab">
+                <h3>Notification Preferences</h3>
+                <p>Choose how you receive notifications from GraveSiteSearch</p>
+                
+                <div class="notification-settings">
+                    <div class="notification-category">
+                        <h4>Maintenance Alerts</h4>
+                        <div class="notification-option">
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                            <span>New maintenance tasks assigned to me</span>
+                        </div>
+                        <div class="notification-option">
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                            <span>Urgent maintenance requests</span>
+                        </div>
+                        <div class="notification-option">
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                            <span>Maintenance task updates</span>
+                        </div>
+                    </div>
+                    
+                    <div class="notification-category">
+                        <h4>Burial Records</h4>
+                        <div class="notification-option">
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                            <span>New burial records added</span>
+                        </div>
+                        <div class="notification-option">
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                            <span>Upcoming burial services</span>
+                        </div>
+                    </div>
+                    
+                    <div class="notification-category">
+                        <h4>System Updates</h4>
+                        <div class="notification-option">
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                            <span>Application updates</span>
+                        </div>
+                        <div class="notification-option">
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                            <span>Scheduled maintenance</span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary">Reset to Default</button>
+                        <button type="button" class="btn-primary">Save Preferences</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="security-tab">
+                <h3>Security Settings</h3>
+                <p>Manage your password and account security</p>
+                
+                <form class="security-form">
+                    <div class="form-group">
+                        <label for="currentPassword">Current Password</label>
+                        <input type="password" id="currentPassword">
+                    </div>
+                    <div class="form-group">
+                        <label for="newPassword">New Password</label>
+                        <input type="password" id="newPassword">
+                        <p class="help-text">Password must be at least 8 characters long</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm New Password</label>
+                        <input type="password" id="confirmPassword">
+                    </div>
+                    
+                    <div class="security-options">
+                        <h4>Additional Security</h4>
+                        <div class="security-option">
+                            <label class="switch">
+                                <input type="checkbox" id="twoFactorAuth">
+                                <span class="slider"></span>
+                            </label>
+                            <span>Enable Two-Factor Authentication</span>
+                        </div>
+                        <div class="security-option">
+                            <label class="switch">
+                                <input type="checkbox" id="logoutSessions" checked>
+                                <span class="slider"></span>
+                            </label>
+                            <span>Logout all other sessions</span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary">Cancel</button>
+                        <button type="submit" class="btn-primary">Update Security Settings</button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="tab-content" id="cemetery-tab">
+                <h3>Cemetery Settings</h3>
+                <p>Configure cemetery-specific settings (admin only)</p>
+                
+                <form class="cemetery-form">
+                    <div class="form-group">
+                        <label for="cemeteryName">Cemetery Name</label>
+                        <input type="text" id="cemeteryName" value="DARAGA CATHOLIC CEMETERY">
+                    </div>
+                    <div class="form-group">
+                        <label for="cemeteryAddress">Address</label>
+                        <input type="text" id="cemeteryAddress" value="5P37+QVF, Daraga (Locsin), 4501 Albay">
+                    </div>
+                    <div class="form-group">
+                        <label for="cemeteryHours">Operating Hours</label>
+                        <input type="text" id="cemeteryHours" value="8:00 AM - 6:00 PM, Daily">
+                    </div>
+                    <div class="form-group">
+                        <label for="cemeteryContact">Contact Email</label>
+                        <input type="email" id="cemeteryContact" value="daragacatholic@gmail.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="cemeterySections">Cemetery Sections</label>
+                        <textarea id="cemeterySections" rows="4">A, B, C, D, E, Daraga Catholic Cemetery</textarea>
+                        <p class="help-text">Comma-separated list of sections</p>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary">Cancel</button>
+                        <button type="submit" class="btn-primary">Save Cemetery Settings</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="../shared/script.js"></script>
+    <script>
+        // Tab functionality
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const tabId = this.getAttribute('data-tab');
+                
+                // Remove active class from all buttons and contents
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabContents.forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding content
+                this.classList.add('active');
+                document.getElementById(`${tabId}-tab`).classList.add('active');
+            });
+        });
+        
+        // Photo upload functionality
+        const uploadBtn = document.getElementById('uploadBtn');
+        const photoInput = document.getElementById('profilePhoto');
+        const currentPhoto = document.getElementById('currentPhoto');
+        
+        uploadBtn.addEventListener('click', function() {
+            photoInput.click();
+        });
+        
+        photoInput.addEventListener('change', function(e) {
+            if (e.target.files && e.target.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    currentPhoto.src = event.target.result;
+                };
+                reader.readAsDataURL(e.target.files[0]);
+            }
+        });
+    </script>
+</body>
+</html>

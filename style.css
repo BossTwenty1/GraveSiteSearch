@@ -1,0 +1,192 @@
+/* Staff Specific Styles */
+.welcome-banner.staff {
+    background-color: var(--primary-color);
+}
+
+.welcome-banner.staff p {
+    background: #F2F2F2;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    display: inline-block;
+    color: var(--dark-color); /* Ensures text is readable */
+    margin-top: 1rem;
+}
+
+.stats-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-bottom: 0.25rem;
+}
+
+.stat-change {
+    font-size: 0.8rem;
+    color: var(--secondary-color);
+}
+
+.staff-sections {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+}
+
+.tasks-section {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.task-list {
+    margin-top: 1rem;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    transition: all 0.3s;
+}
+
+.task-item:hover {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.task-item.urgent {
+    border-left: 4px solid var(--danger-color);
+}
+
+.task-info h4 {
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+}
+
+.task-info p {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.25rem;
+}
+
+.task-date {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+.btn-small {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+
+.quick-actions-staff {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.action-buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.btn-action {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background-color: var(--light-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s;
+}
+
+.btn-action:hover {
+    background-color: #ddd;
+}
+
+.btn-action i {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+}
+
+/* Table container spacing */
+.records-table-container {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    overflow-x: auto;
+}
+
+/* Table styling and spacing */
+.records-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+
+.records-table th, .records-table td {
+    padding: 1rem 1.2rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.records-table th {
+    background: #f7f7f7;
+    font-weight: 600;
+}
+
+.records-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Add some spacing above the pagination */
+.pagination {
+    margin-top: 2rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* Uniform staff images in maintenance list - bigger avatar */
+.assignee img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #e0e0e0;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}

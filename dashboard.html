@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GraveSiteSearch - Staff Dashboard</title>
+    <link rel="stylesheet" href="../shared/style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="app-header">
+        <div class="header-left">
+            <h1>GraveSiteSearch</h1>
+            <p>Staff Portal</p>
+        </div>
+        <div class="header-right">
+            <button class="btn-icon" id="notificationsBtn">
+                <span class="notification-badge">5</span>
+                <i class="icon-bell"></i>
+            </button>
+            <div class="user-profile">
+                <img src="../assets/avatar.jpg" alt="User">
+                <span>Sarah Staff</span>
+            </div>
+        </div>
+    </header>
+
+    <nav class="sidebar">
+        <ul>
+            <li class="active"><a href="dashboard.html"><i class="icon-home"></i> Dashboard</a></li>
+            <li><a href="map.html"><i class="icon-map"></i> Cemetery Map</a></li>
+            <li><a href="schedule.html"><i class="icon-calendar"></i> Maintenance</a></li>
+            <li><a href="#"><i class="icon-records"></i> Records</a></li>
+            <li><a href="#"><i class="icon-settings"></i> Settings</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <div class="welcome-banner staff">
+            <h2>Staff Dashboard</h2>
+            <p>Manage cemetery operations and maintenance</p>
+        </div>
+
+        <div class="stats-cards">
+            <div class="stat-card">
+                <h3>Total Graves</h3>
+                <p class="stat-number">1,248</p>
+                <p class="stat-change">+12 this month</p>
+            </div>
+            <div class="stat-card">
+                <h3>Maintenance Due</h3>
+                <p class="stat-number">27</p>
+                <p class="stat-change">+3 since yesterday</p>
+            </div>
+            <div class="stat-card">
+                <h3>Upcoming Services</h3>
+                <p class="stat-number">8</p>
+                <p class="stat-change">Next: Tomorrow</p>
+            </div>
+            <div class="stat-card">
+                <h3>Available Plots</h3>
+                <p class="stat-number">142</p>
+                <p class="stat-change">Section D mostly available</p>
+            </div>
+        </div>
+
+        <div class="staff-sections">
+            <div class="tasks-section">
+                <h3>Your Tasks</h3>
+                <div class="task-list">
+                    <div class="task-item urgent">
+                        <div class="task-info">
+                            <h4>Urgent: Repair headstone in Section B</h4>
+                            <p>Plot B-15 has a damaged headstone that needs repair</p>
+                            <p class="task-date">Due: Today</p>
+                        </div>
+                        <button class="btn-small">Mark Complete</button>
+                    </div>
+                    <div class="task-item">
+                        <div class="task-info">
+                            <h4>Weekly grounds maintenance</h4>
+                            <p>Mow lawns and trim hedges in Sections A and C</p>
+                            <p class="task-date">Due: Friday</p>
+                        </div>
+                        <button class="btn-small">Mark Complete</button>
+                    </div>
+                    <div class="task-item">
+                        <div class="task-info">
+                            <h4>Prepare for new burial</h4>
+                            <p>Prepare plot D-42 for Johnson family service</p>
+                            <p class="task-date">Due: June 15</p>
+                        </div>
+                        <button class="btn-small">Mark Complete</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quick-actions-staff">
+                <h3>Quick Actions</h3>
+                <div class="action-buttons">
+                    <button class="btn-action">
+                        <i class="icon-add"></i>
+                        <span>Add New Burial Record</span>
+                    </button>
+                    <button class="btn-action">
+                        <i class="icon-report"></i>
+                        <span>Generate Report</span>
+                    </button>
+                    <button class="btn-action">
+                        <i class="icon-schedule"></i>
+                        <span>Schedule Maintenance</span>
+                    </button>
+                    <button class="btn-action">
+                        <i class="icon-map"></i>
+                        <span>View Cemetery Map</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../shared/script.js"></script>
+</body>
+</html>
